@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.bingjunior.umair_ibook.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_onboardingPage"
+            app:destination="@id/onboardingPage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingPage"
+        android:name="com.bingjunior.umair_ibook.OnBoardingFragment"
+        android:label="fragment_onboarding_page"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onboardingPage_to_signinPage"
+            app:destination="@id/signinPage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signinPage"
+        android:name="com.bingjunior.umair_ibook.SignInFragment"
+        android:label="fragment_signin_page"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signinPage_to_signupPage"
+            app:destination="@id/signupPage" />
+        <action
+            android:id="@+id/action_signinPage_to_proceedPage"
+            app:destination="@id/proceedPage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupPage"
+        android:name="com.bingjunior.umair_ibook.SignUpFragment"
+        android:label="fragment_signup_page"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signupPage_to_signinPage"
+            app:destination="@id/signinPage" />
+        <action
+            android:id="@+id/action_signupPage_to_proceedPage"
+            app:destination="@id/proceedPage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/proceedPage"
+        android:name="com.bingjunior.umair_ibook.ProceedFragment"
+        android:label="fragment_proceed_page"
+        tools:layout="@layout/fragment_proceed" >
+        <action
+            android:id="@+id/action_proceedPage_to_signinPage"
+            app:destination="@id/signinPage" />
+    </fragment>
+
+</navigation>
